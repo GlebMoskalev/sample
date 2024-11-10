@@ -27,3 +27,4 @@
 /Users/glebmoskalev/RiderProjects/BlazorApp3/BlazorApp3/obj/Debug/net8.0/BlazorApp3.pdb
 /Users/glebmoskalev/RiderProjects/BlazorApp3/BlazorApp3/obj/Debug/net8.0/BlazorApp3.genruntimeconfig.cache
 /Users/glebmoskalev/RiderProjects/BlazorApp3/BlazorApp3/obj/Debug/net8.0/ref/BlazorApp3.dll
+/Users/glebmoskalev/RiderProjects/BlazorApp3/BlazorApp3/obj/Debug/net8.0/BlazorApp3.sourcelink.json

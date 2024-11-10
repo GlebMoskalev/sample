@@ -1,0 +1,26 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to Server
+        env:
+          SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          ssh -o StrictHostKeyChecking=no -i $SSH_KEY glebmoskalev@130.193.58.8 << 'EOF'
+            cd /path/to/project
+            docker build -t blazorapp:latest .
+            docker stop blazorapp || true
+            docker rm blazorapp || true
+            docker run -d --name blazorapp -p 80:8080 blazorapp:latest
+          EOF

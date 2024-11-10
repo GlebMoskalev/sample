@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name 130.193.58.8; # Замените на ваш домен или IP-адрес
+    server_name 84.252.133.181; # Замените на ваш домен или IP-адрес
 location / {
     proxy_pass http://localhost:5283; 
     proxy_http_version 1.1;
